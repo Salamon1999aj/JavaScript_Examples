@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1></h1>
+    <p ></p>
+<script>
+var cart=[{item :'mouse',price:500,quantity:1},
+          {item :'keyboard',price:800,quantity:1},
+          {item :'labtop',price:10000,quantity:1}];
+
+var itemtoupdate='keyboard';
+var updatedcartwithquantity=updatedcartwithquantity.map((product)=>product.item===itemtoupdate?{...product,quantity:product.quantity+2}:product);
+document.write(updatedcartwithquantity);
+</script>
+</body>
+</html>

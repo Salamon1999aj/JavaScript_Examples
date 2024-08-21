@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+    <h1></h1>
+    <p></p>
+<script>
+var users = [
+  { id: 1, name: 'John Doe', age: 30 },
+  { id: 2, name: 'Jane Doe', age: 25 },
+  { id: 3, name: 'Bob Smith', age: 40 }
+];
+users = users.filter(user => user.id !== 2);
+console.log(users);
+users = users.map(user => {
+  if (user.id === 1) {
+    user.name = 'John Smith';
+  }
+  return user;
+});
+console.log(users);
+</script>  
+</body>
+</html>
+
+
+
+

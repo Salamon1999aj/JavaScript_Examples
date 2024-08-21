@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1></h1>
+    <p><button onclick="calculate('add')">addition</button>
+        <button onclick="calculate('sub')">subtraction</button>
+        <button onclick="calculate('multi')">multiblication</button>
+        <button onclick="calculate('div')">divition</button>
+        <button onclick="calculate('expo')">exponation</button>
+    </p>
+
+<script>
+    function addNumber(x,y){
+        
+        var z = x + y
+        return z
+    }
+    function subNumber(x,y){
+        var z = x - y
+        return z
+    }
+    function multiNumber(x,y){
+         var z = x * y
+        return z
+    }
+    function divNumber(x,y){
+        
+        var z = x / y
+        return z
+    }
+    function expoNumber(x,y){
+       
+        var z = x ** y
+        return z
+    }
+function calculate(operation)
+{
+    switch(operation){
+    case 'add':
+        result = addNumber(45,45)
+        document.write("the result is :"+result);
+        break;
+        case 'sub':
+        result = subNumber(10,40)
+        document.write("the result is :"+result);
+        break;
+        case 'multi':
+        result = multiNumber(10,10)
+        document.write("the result is :"+ result);
+        break;
+        case 'div':
+        result = divNumber(23,2)
+        document.write("the result is :"+result);
+        break;
+        case 'expo':
+        result = expoNumber(12,12);
+        document.write("the result is :"+result);
+        break;
+    
+} 
+
+}
+</script>
+</body>
+</html>

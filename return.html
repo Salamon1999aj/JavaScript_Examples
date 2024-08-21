@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1></h1>
+    <p><button onclick="calculate('add')">addition</button>
+        <button onclick="calculate('sub')">subtraction</button>
+        <button onclick="calculate('multi')">multiblication</button>
+        <button onclick="calculate('div')">divition</button>
+        <button onclick="calculate('expo')">exponation</button>
+    </p>
+
+<script>
+    function addNumber(){
+        var x=(parseInt(prompt("enter the x value")));
+        var y=(parseInt(prompt("enter the y value")));
+        var z = x + y
+        return z
+    }
+    function subNumber(){
+        var x=(parseInt(prompt("enter the x value")));
+        var y=(parseInt(prompt("enter the y value")));
+        var z = x - y
+        return z
+    }
+    function multiNumber(){
+        var x=(parseInt(prompt("enter the x value")));
+        var y=(parseInt(prompt("enter the y value")));
+        var z = x * y
+        return z
+    }
+    function divNumber(){
+        var x=(parseInt(prompt("enter the x value")));
+        var y=(parseInt(prompt("enter the y value")));
+        var z = x / y
+        return z
+    }
+    function expoNumber(){
+        var x=(parseInt(prompt("enter the x value")));
+        var y=(parseInt(prompt("enter the y value")));
+        var z = x ** y
+        return z
+    }
+function calculate(operation)
+{
+    switch(operation){
+    case 'add':
+        result = addNumber()
+        document.write(result);
+        break;
+        case 'sub':
+        result = subNumber()
+        document.write(result);
+        break;
+        case 'multi':
+        result = multiNumber()
+        document.write(result);
+        break;
+        case 'div':
+        result = divNumber()
+        document.write(result);
+        break;
+        case 'expo':
+        result = expoNumber();
+        document.write(result);
+        break;
+    
+} 
+function displayresult(result){
+    var result=addnumber();
+    document.write("the result is :"+result); 
+
+}
+}
+</script>
+</body>
+</html>

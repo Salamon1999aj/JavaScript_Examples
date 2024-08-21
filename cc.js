@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1></h1>
+    <p></p>
+ 
+<script>
+var buttons = [
+  { label= 'C', action= 'clear' },
+  { label= 'DEL', action= 'delete' },
+  { label= '/', action= 'append' },
+  { label= '*', action= 'append' },
+  { label= '-', action= 'append' },
+  { label= '+', action= 'append' },
+  { label= '0', action= 'append' },
+  { label= '1', action= 'append' },
+  { label= '2', action= 'append' },
+  { label= '3', action= 'append' },
+  { label= '4', action= 'append' },
+  { label= '5', action= 'append' },
+  { label= '6', action= 'append' },
+  { label= '7', action= 'append' },
+  { label= '8', action= 'append' },
+  { label= '9', action= 'append' },
+  { label= '=', action= 'calculate' }
+];
+    switch (button.action) {
+      case 'clear':
+        clearDisplay();
+        break;
+      case 'delete':
+        deleteLastChar();
+        break;
+      case 'append':
+        appendChar(button.label);
+        break;
+      case 'calculate':
+        calculate();
+        break;
+    }
+  };
+  document.body.appendChild(btn);
+});
+
+function clearDisplay() {
+  display.value = '';
+}
+
+function deleteLastChar() {
+  const displayValue = display.value;
+  display.value = displayValue.slice(0, -1);
+}
+
+function appendChar(char) {
+  display.value += char;
+}
+
+function calculate() {
+  const displayValue = display.value;
+  display.value = eval(displayValue);
+}
+</script>  
+</body>
+</html>

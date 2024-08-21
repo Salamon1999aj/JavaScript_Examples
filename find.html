@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1></h1>
+    <p ></p>
+    <script>
+function add(a,b) {
+    return(a+b);
+}
+var addfive=add.bind(add,6);
+var result=(addfive(6));
+document.write(result);
+</script>
+</body>
+</html>

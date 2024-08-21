@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1></h1>
+    <p><button onclick="calculate('add')">addition</button>
+        <button onclick="calculate('sub')">subtraction</button>
+        <button onclick="calculate('multi')">multiblication</button>
+        <button onclick="calculate('div')">divition</button>
+        <button onclick="calculate('expo')">exponation</button>
+    </p>
+
+<script>
+   var a= function (x,y){
+        
+        var z = x + y
+        return z
+    }
+    var a= function (x,y){
+        var z = x - y
+        return z
+    }
+    var a= function (x,y){
+         var z = x * y
+        return z
+    }
+    var a= function (x,y){
+        
+        var z = x / y
+        return z
+    }
+    var a= function (x,y){
+       
+        var z = x ** y
+        return z
+    }
+function calculate(operation)
+{
+    switch(operation){
+    case 'add':
+        a=(45,45)
+        result=a;
+        document.write("the result is :"+result);
+        break;
+        case 'sub':
+        a=(10,40)
+        result=a
+        document.write("the result is :"+result);
+        break;
+        case 'multi':
+        a=(10,10)
+        result=a
+        document.write("the result is :"+ result);
+        break;
+        case 'div':
+        a=(23,2)
+        result=a
+        document.write("the result is :"+result);
+        break;
+        case 'expo':
+        a=(12,12);
+        result=a
+    
+        document.write("the result is :"+result);
+        break;
+    
+} 
+
+}
+</script>
+</body>
+</html>

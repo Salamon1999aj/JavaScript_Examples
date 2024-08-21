@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested Array Input</title>
+</head>
+<body>
+    <script>
+
+        function getNumber(promptText) {
+            let input;
+            do {
+                input = parseInt(prompt(promptText), 10);
+            } while (isNaN(input) || input <= 0);
+            return input;
+        }
+
+        const rows = getNumber("Enter the number of rows:");
+        const columns = getNumber("Enter the number of columns:");
+        const matrix = [];
+        let rowIndex = 0;
+        do {
+            matrix[rowIndex] = [];
+            let columnIndex = 0;
+            do {
+                const value = prompt(`Enter value for position [${rowIndex}][${columnIndex}]:`);
+                matrix[rowIndex][columnIndex] = value;
+                columnIndex++;
+            } while (columnIndex < columns);
+            rowIndex++;
+        } while (rowIndex < rows);
+        rowIndex = 0;
+        let matrixOutput = "Matrix contents:\n";
+        do {
+            let columnIndex = 0;
+            do {
+                matrixOutput += matrix[rowIndex][columnIndex] + " ";
+                columnIndex++;
+            } while (columnIndex < columns);
+            matrixOutput += "\n";
+            rowIndex++;
+        } while (rowIndex < rows);
+
+        alert(matrixOutput);
+    </script>
+</body>
+</html>

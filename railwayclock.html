@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+</head>
+<body>
+    <div id="clock"></div>
+    <script>
+
+function updateClock() {
+  const now=new Date();
+  const hours=now.getHours();
+  const minutes=now.getMinutes();
+  const seconds=now.getSeconds();
+  const railwayHours=hours;
+  const railwayMinutes=minutes;
+  const railwaySeconds=seconds;
+  const railwayTime =  ampm=hours<12?'AM':'PM';
+    (railwayHours <10?'0' + railwayHours:railwayHours) + 
+    (railwayMinutes<10?'0'+ railwayMinutes:railwayMinutes) + 
+    (railwaySeconds<10?'0'+ railwaySeconds:railwaySeconds);
+    const timeString=`${hours}:${minutes}:${seconds}${ampm}`;
+
+  document.getElementById('clock').innerHTML=timeString;
+}
+setInterval(updateClock,1000);
+ </script>
+</body>
+</html>

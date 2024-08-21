@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1></h1>
+    <p></p>
+ 
+<script>
+let students = [];
+const addStudent = () => {
+  let id = prompt("Enter student id:");
+  let name = prompt("Enter student name:");
+  let age = prompt("Enter student age:");
+  students.push({ id, name, age });
+  console.log(students);
+};
+const updateStudent = () => {
+  let id = prompt("Enter student id to update:");
+  let name = prompt("Enter new name:");
+  let age = prompt("Enter new age:");
+  let index = students.findIndex(s => s.id === parseInt(id));
+  if (index !== -1) {
+    students[index] = { id: parseInt(id), name, age: parseInt(age) };
+  }
+  console.log(students);
+};
+const deleteStudent = () => {
+  let id = prompt("Enter student id to delete:");
+  students = students.filter(s => s.id !== parseInt(id));
+  console.log(students);
+};
+addStudent();
+addStudent();
+updateStudent();
+deleteStudent();
+</script>  
+</body>
+</html>

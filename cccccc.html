@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>Calculator</h1>
+       <p> <div class="calculator">
+        <input type="text" id="display" disabled>
+        <div class="buttons"><br>
+        <button onclick="deletelastchar()">del</button>
+        <button onclick="cleardisplay()">C</button>
+        <button onclick="appendchar('+')">+</button>
+        <button onclick="appendchar('-')">-</button>
+        <button onclick="appendchar('*')">*</button>
+        <button onclick="appendchar('/')">/</button><br><br>
+        <button onclick="appendchar('1')">1</button>
+        <button onclick="appendchar('2')">2</button>
+        <button onclick="appendchar('3')">3</button>
+        <button onclick="appendchar('4')">4</button>
+        <button onclick="appendchar('5')">5</button>
+        <button onclick="appendchar('6')">6</button><br><br>
+        <button onclick="appendchar('7')">7</button>
+        <button onclick="appendchar('8')">8</button>
+        <button onclick="appendchar('9')">9</button>
+        <button onclick="appendchar('0')">0</button>
+        <button onclick="appendchar('00')">00</button>
+        <button onclick="calculate()">=</button>
+       </div>
+      </div></p>
+ <script>
+  switch(button.action) {
+    
+    case "clear":
+          cleardisplay();
+          break;
+    case "delete":
+          deletelastchar();
+          break;
+    case "append":
+          appendchar(button.label);
+          break;
+    case "calculate":
+          calculate();
+          break;
+  }
+</script>  
+</body>
+</html>

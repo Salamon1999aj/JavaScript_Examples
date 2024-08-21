@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1></h1>
+    <p></p>
+ 
+<script>
+const students=[];
+var addStudent=()=>{
+  const name=prompt("Enter student name:");
+  const age=prompt("Enter student age:");
+  const std=prompt("Enter student std:");
+  students.push({name,age,std});
+  console.log(students);
+};
+var updateStudent=()=> {
+  const name=prompt("enter student name to update:");
+  const age=prompt("enter new age:");
+  const std=prompt("enter new std:");
+  const updatestudents=students.findupdatestudent(students=>student.nameupdate===parseInt(nameupdate));
+  if (nameupdate!==-1) {
+    students[updatestudents]={name:parseInt(name),age,std:parseInt(std)};
+  }
+  console.log(students);
+};
+var deleteStudent=()=>{
+  const name=prompt("enter student name to delete:");
+  students=students.filter(student=>student.name!==parseInt(name));
+  console.log(students);
+};
+addStudent();
+updateStudent();
+deleteStudent();
+</script>  
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<body>      
+    <h1></h1>
+    <p></p>
+ 
+<script>
+ students=[];
+const addStudent=(id,name,age)=>{   
+    const student={id,name,age};
+    students.push(student);
+}
+const updateStudent=(id,newname,newage)=>{
+    const student=students.find(student=>student.id===parseInt(id));
+    if (student) {
+        student.name=newname;
+        student.age=newage;
+    } else {
+        console.log('Student not found');
+    }
+}
+const deleteStudent=(id)=> {
+    const index=students.findIndex(student=>student.id===parseInt(id));
+    if (index!==-1) {
+        students.splice(index,1);
+    } else {
+        console.log('student not found');
+    }
+};
+addStudent(1,'sals',20);
+addStudent(2,'wwww',22);
+console.log(students);
+
+updateStudent(2,'sals',21);
+console.log('After update:',students);
+
+deleteStudent(1);
+console.log('After delete:',students)
+
+
+</script>  
+</body>
+</html>

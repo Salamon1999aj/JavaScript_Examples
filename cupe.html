@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1></h1>
+    <p ></p>
+
+<script>
+var a=(parseInt(prompt("enter the a value"))); 
+var temp = a; 
+var sum =0;
+while(temp>0)
+{
+d = temp%10
+sum = sum+(d**3)
+temp=Math.floor(temp/10);
+     
+}
+if(sum==a){
+document.write( "This is  armstrong number"); 
+}
+else{
+    document.write("Not armstrong number");
+}
+</script>
+</body>
+</html>

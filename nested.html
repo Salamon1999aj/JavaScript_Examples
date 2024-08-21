@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1></h1>
+    <p></p>
+ 
+<script>
+  users=[];
+        const name=prompt("enter the name");
+     const age=prompt("enter the age");
+    const contactno=prompt("enter the contact no");
+
+    const user={name:name,
+                age:age,
+                contactno:contactno}
+                users.push(user);
+                add=prompt("do you want another user");
+ (add=="yes");
+
+ function deleteUser() {
+  const users=users.filter(user=>user.name!==(name));
+  console.log(users);
+}
+function updateUser() {
+  const user=users.find(user=>user.age===(age));
+
+  if (user) {
+    user.name=prompt("enter new name:");
+    user.age=prompt("enter new age:");
+  }
+  console.log(users);
+}
+    
+
+    
+               
+</script>  
+</body>
+</html>

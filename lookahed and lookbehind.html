@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script> 
+const word='I have a bad and i am good';
+const x= /bad(?= and)/;
+document.write(word.match(x));
+document.write('<br>');
+const y= /bad(?! and)/;
+document.write(word.match(y));
+document.write('<br>');
+const w= /(?<=I have a )bad/;
+document.write(word.match(w));
+document.write('<br>');
+const z= /(?<!I have a)bad/;
+document.write(word.match(z));
+</script>
+</body>
+</html>

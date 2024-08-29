@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script> 
+var x= /hello/;
+let y= "Hello, hello world!";
+let result=x.exec(y);
+
+if (result) {
+  console.log("Match found!");
+  console.log("Matched text:", result[0]);
+  console.log("Index of match:", result.index);
+  console.log("Input string:", result.input); 
+} else {
+  console.log("No match found.");
+}
+</script>
+</body>
+</html>

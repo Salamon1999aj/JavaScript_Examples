@@ -2,7 +2,7 @@
 <html>
 <body>
 <script> 
-const word='I have a bad and i am good';
+const word='I have a bad 100 and i am good';
 const x= /bad(?= and)/;
 document.write(word.match(x));
 document.write('<br>');
@@ -12,7 +12,7 @@ document.write('<br>');
 const w= /(?<=I have a )bad/;
 document.write(word.match(w));
 document.write('<br>');
-const z= /(?<!I have a)bad/;
+const z= /(?<!I have a)and/;
 document.write(word.match(z));
 </script>
 </body>

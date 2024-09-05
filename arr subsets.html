@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <script>
+function getsubsets(arr) {
+  var subsets=[];
+  for(var i=0;i<(1<<arr.length);i++) {
+    var subset=[];
+    for(var j=0;j<arr.length; j++) {
+      if((i &(1 << j)))subset.push(arr[j]);
+    }
+    subsets.push(subset);
+  }
+  return subsets;
+}
+var arr = [1,2];
+console.log(getSubsets(arr));
+</script>
+</body>
+</html>

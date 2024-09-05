@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <script>
+function maxsubarraysum(arr) {
+  var maxsoFar=arr[0];
+  var maxendingHere=arr[0];
+  for (var i= 1;i<arr.length;i++) {
+    maxendingHere=Math.max(arr[i],maxendingHere+arr[i]);
+    maxsoFar=Math.max(maxsoFar,maxendingHere);
+  }
+  return maxSoFar;
+}
+var arr = [-2,1,-3,4,-1,2,-2,1,-5,4,-1,2,1];
+document.write(maxSubarraySum(arr)); 
+
+</script>
+</body>
+</html>

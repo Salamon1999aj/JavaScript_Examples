@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <script>
+function findKthelement(arr,k,smalles =true) {
+  if (k< 1||k>arr.length) {
+    throw new Error("k is out of range");
+  }
+  arr.sort((a,b)=>(smallest?a-b:b-a));
+  return arr[k - 1];
+}
+var arr= [5,2,8,1,9];
+console.log(findKthelement(arr,3));
+console.log(findKthelement(arr,2,false));
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+function maxdifference(arr) {
+  var maxdiff=0;
+  var minelement=arr[0];
+
+  for (var i=1;i<arr.length; i++) {
+    if (arr[i]-minelement>maxdiff) {
+      maxdiff = arr[i]-minelement;
+    }
+    if (arr[i]<minelement) {
+      minelement=arr[i];
+    }
+  }
+return maxdiff;
+}
+var arr=[2,3,10,6,4,8,1];
+console.log(maxdifference(arr));
+</script>
+</body>
+</html>

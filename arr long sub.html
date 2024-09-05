@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <script>
+function longestincreasingsubsequence(arr) {
+  var lis = [arr[0]];
+  for (var i=1;i<arr.length;i++) {
+    if (arr[i]>lis[lis.length-1]) {
+      lis.push(arr[i]);
+    } else {
+      var idx=lis.findIndex((val)=>val>=arr[i]);
+      lis= lis.slice(0,idx).concat([arr[i]]);
+    }
+  }
+  return lis;
+}
+var arr = [10,22,9,33,21,50,41,60,80];
+console.log(longestincreasingsubsequence(arr));
+</script>
+</body>
+</html>

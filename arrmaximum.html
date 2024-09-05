@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <script>
+function maxproduct(arr) {
+  arr.sort((a,b)=>a-b);
+  return math.max(arr[0]*arr[1],arr[arr.length-1]*arr[arr.length-2]);
+}
+let arr = [1,20,3,10];
+console.log(maxproduct(arr));
+</script>
+</body>
+</html>

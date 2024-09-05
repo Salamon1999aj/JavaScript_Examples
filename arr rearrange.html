@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <script>
+function rearrange(arr) {
+const positives = arr.filter(num => num > 0);
+const negatives = arr.filter(num => num < 0);
+
+const result = [];
+while (positives.length && negatives.length) {
+        result.push(positives.shift());
+        result.push(negatives.shift());
+    }
+    return result.concat(positives).concat(negatives);
+}
+const arr= [1,2,3,-4,-1,4];
+console.log(rearrange(arr));
+</script>
+</body>
+</html>

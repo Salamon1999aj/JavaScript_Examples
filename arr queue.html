@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+class Queue {
+constructor() {
+this.items = [];
+            }
+enqueue(element) {
+this.items.push(element);
+ }
+ dequeue() {
+if (this.isempty()) {
+ return "queue is empty";
+ }
+return this.items.shift();
+            }
+front() {
+if (this.ieEmpty()) {
+return "queue is empty";
+ }
+ return this.items[0];
+            }
+isempty() {
+     return this.items.length === 0;
+    }
+ size() {
+ return this.items.length;
+}
+print() {
+ console.log(this.items.join(', '));
+}
+ }
+          
+const queue = new queue();
+queue.enqueue(2);
+queue.enqueue(3);
+queue.enqueue(4);
+console.log("front element:",queue.front());
+console.log("dequeue:",queue.dequeue()); 
+console.log("size:",queue.size());         
+queue.print();                               
+</script>
+</body>
+</html>

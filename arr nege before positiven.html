@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <script>
+function rearrangearray(arr) {
+  return arr.sort((a, b)=>b- a).filter(x=>x<0).concat(arr.filter(x=>x>=0));
+}
+var arr=[-1,2,-3,4,-5];
+console.log(rearrangearray(arr));
+</script>
+</body>
+</html>

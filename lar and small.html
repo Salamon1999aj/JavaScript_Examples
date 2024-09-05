@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body></body>
+<script>
+const num= [3,5,7,2,8];
+var smallest= num[0];
+var largest = num[0];
+for (var i=1;i<num.length;i++) {
+    if (num[i]<smallest) {
+        smallest=num[i];
+    }
+    if (num[i]>largest) {
+        largest=num[i];
+    }
+}
+document.write("smallest number:",smallest);
+document.write("largest number:",largest);
+</script>
+</body>
+</html>
